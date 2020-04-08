@@ -7,10 +7,10 @@ export const getFullList = () =>({
     type: "GET_TODO_LIST"
 })
 
-export const searchTodo = (id="", content="") =>({
+export const searchTodo = (id:string, content:string, completed?:string) =>({
     type: "SEARCH_TODO",
-    param: id,
-    content: content
+    param: `?${id}=${content}`,
+    state: completed? `completed=${completed}` :""
 })
 
 

@@ -1,5 +1,6 @@
 .App {
   box-sizing: border-box;
+  background-color: #7C9A9B;
   text-align: center;
   display: flex;
   padding: 35px;
