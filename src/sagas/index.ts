@@ -26,7 +26,7 @@ export function* watchSearchTodo() {
 }
 
 export function* searchTodo(action){
-    const res = yield call(Axios.get, `${APIurl}/todos?${action.param}=${action.content}`);
+    const res = yield call(Axios.get, `${APIurl}/todos?${action.param}${action.state}`);
     console.log(res.data);
     yield put(setTodos(res.data));
 }

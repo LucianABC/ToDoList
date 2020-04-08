@@ -9,8 +9,8 @@ export const getFullList = () =>({
 
 export const searchTodo = (id:string, content:string, completed?:string) =>({
     type: "SEARCH_TODO",
-    param: `?${id}=${content}`,
-    state: completed? `completed=${completed}` :""
+    param: `${id}=${content}`,
+    state: completed? `&completed=${completed}` :""
 })
 
 
